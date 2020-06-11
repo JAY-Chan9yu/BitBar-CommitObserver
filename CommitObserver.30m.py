@@ -1,13 +1,12 @@
 #!/usr/bin/env LC_ALL=en_US.UTF-8 /usr/local/bin/python3
 
-# <bitbar.title>Commit Observer</bitbar.title>
-# <bitbar.version>v0.1</bitbar.version>
+# <bitbar.title>CommitObserver</bitbar.title>
+# <bitbar.version>v1.0</bitbar.version>
 # <bitbar.author>Fitware Jay</bitbar.author>
 # <bitbar.author.github>JAY-Chan9yu</bitbar.author.github>
 # <bitbar.image></bitbar.image>
-# <bitbar.desc>If you want to monitor whether your teammates are committing or not, try this plugin.(
-# joke)</bitbar.desc>
-# <bitbar.dependencies>python</bitbar.dependencies>
+# <bitbar.desc>If you want to monitor whether your teammates are committing or not, try this plugin.(joke)</bitbar.desc>
+# <bitbar.dependencies>python3</bitbar.dependencies>
 
 import requests
 import os
