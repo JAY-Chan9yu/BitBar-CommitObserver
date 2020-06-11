@@ -9,3 +9,18 @@ and please install requiremets.
 > pip3 install bs4
 
 > pip3 install PyYAML
+
+## usage
+1. Revise commit_observer -> github_user_list.yml 
+2. Enter the name and github id of the member you want to monitor.
+
+ex)
+```
+# Commit Observer Github ID List
+
+# please insert your team member's name into username
+# and insert github ID into github_id
+githubID: 
+  - name: Jay
+    id: Jay-Chan9yu
+```
