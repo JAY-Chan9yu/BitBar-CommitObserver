@@ -7,6 +7,8 @@
 # <bitbar.image></bitbar.image>
 # <bitbar.desc>If you want to monitor whether your teammates are committing or not, try this plugin.(joke)</bitbar.desc>
 # <bitbar.dependencies>python3</bitbar.dependencies>
+# <bitbar.abouturl>https://github.com/JAY-Chan9yu/BitBar-CommitObserver</bitbar.abouturl>
+
 
 import requests
 import os
