@@ -9,11 +9,12 @@
 # <bitbar.dependencies>python3</bitbar.dependencies>
 # <bitbar.abouturl>https://github.com/JAY-Chan9yu/BitBar-CommitObserver</bitbar.abouturl>
 
+import datetime
+import os
 
 import requests
-import os
-from bs4 import BeautifulSoup
 import yaml
+from bs4 import BeautifulSoup
 
 GOOD = "💚"
 BAD = "🚨"
@@ -37,10 +38,19 @@ for user in user_dict:
         temp_emoji_list = EMOJI_LIST
         emoji = temp_emoji_list.pop()
 
-    source = requests.get("https://github.com/{}".format(user.get('id'))).text
+    # If you don't use {to} in the url parameter, you can't see today's commit for local time due to utc time
+    today = datetime.datetime.today().strftime('%Y-%m-%d')
+    source = requests.get('https://github.com/{}?to={}'.format(
+        user.get('id'),
+        today
+    )).text
     soup = BeautifulSoup(source, "html.parser")
+
     if soup.select('rect'):
-        user_commit = soup.select('rect')[-1].get('data-count')
+        user_commit = soup.find(
+            "rect",
+            attrs={"data-date": today}
+        ).get('data-count')
 
         if int(user_commit) == 0:
             print("{} {} : {}".format(emoji, user.get('name'), BAD))
