@@ -6,6 +6,8 @@ If you use this `BitBar-CommitObserver`, you have to install `python3`.
 and please install requiremets.
 
 ## requirements
+> pip3 install requests
+
 > pip3 install bs4
 
 > pip3 install PyYAML
@@ -24,3 +26,6 @@ githubID:
   - name: Jay
     id: Jay-Chan9yu
 ```
+
+## example
+![image](https://user-images.githubusercontent.com/24591259/84578529-147a9680-ae01-11ea-8b90-1c712a4becdf.png)
